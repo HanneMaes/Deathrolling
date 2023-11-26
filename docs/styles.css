@@ -1,7 +1,58 @@
-a {
-    text-decoration: none;
+@font-face {
+    font-family: 'basteleur';
+    src: url('fonts/Basteleur-Bold.woff');
+}
+
+body {
+    font-family: 'basteleur';
+    font-size: 100px;
+    background-color: #00201e;
+    color: #007f5f;
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page {
+    background-color: #3a5268;
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 15px;
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
 }
 
 .hidden {
     display: none;
+}
+
+/**************/
+/* typography */
+/**************/
+
+input {
+    background-color: #3a5268;
+    color: #00e88a;
+    font-family: 'basteleur';
+    width: 100%;
+    font-size: 100px;
+    text-align: center;
+}
+
+a {
+    color: #007f5f;
+    text-decoration: none;
+}
+
+.number {
+    font-size: 300px;
+    color: #00e88a;
 }
