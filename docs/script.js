@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
 function startGame() {
     console.log('GAME STARTED');
 
+    // play sound
+    const fightBeat = new Audio('sounds/fight and dance with the devil.mp3');
+    fightBeat.play();
+
     // hide startpage
     const startPageDiv = document.getElementById('startPage'); // console.log('startPageDiv:', startPageDiv);
     startPageDiv.classList.add('hidden');                      // hide
@@ -31,6 +35,7 @@ function startGame() {
     // start game
     updatePage();
     rollBtn.addEventListener("click", roll);
+    const deathBeat = new Audio('sounds/dj-airhorn.mp3');
 
     //***********************************
 
@@ -38,9 +43,12 @@ function startGame() {
         console.log('ROLL: random between 1 and ' + currentNumber);
 
         currentNumber = Math.floor(Math.random() * currentNumber) + 1;
-        console.log('  -> ' + currentNumber);
+        console.log('-> ' + currentNumber);
 
         updatePage();
+
+        // death
+        if (currentNumber == 1) { deathBeat.play(); }
     }
     
     //***********************************
